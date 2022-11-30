@@ -10,7 +10,7 @@ const GameBoard = ({ randomList, setRandomList, resetList }) => {
     axios.get(`/img?imgIndex=${imgIndex}`).then((res) => {
       setBgImg(res.data);
     });
-  }, []);
+  }, [resetList]);
 
   useEffect(() => {
     selectImage(1);
